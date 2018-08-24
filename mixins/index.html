@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>RIOT | StackAcademy.tv </title>
+    <link rel="stylesheet" href="style/stack.css">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/riot+compiler.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="header">Mixins</a></h1>
+
+      <!-- Lesson Code -->
+      <cta name="cta-button" label="Click Here!"></cta>
+
+      <!-- Riot Tags -->
+      <script type="riot/tag" src="tags/cta.tag"></script>
+      <script>
+
+        var RequiredOpt = {
+          init: function() {
+            this.on('mount',function(){
+              console.log('RequiredOpt mixin added to: ' + this.root.localName);
+            });
+            if ( !this.opts.name ) {
+              console.error('Missing name option');
+            }
+          }
+        };
+
+        riot.mixin(RequiredOpt);
+        //registers the mixin to be used globally
+
+      </script>
+      <script>riot.mount('*');</script>
+
+    </div>
+  </body>
+</html>
