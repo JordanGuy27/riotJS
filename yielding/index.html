@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>RIOT | StackAcademy.tv </title>
+    <link rel="stylesheet" href="style/stack.css">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/riot+compiler.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="header">Yielding</a></h1>
+
+      <!-- Lesson Code -->
+      <blog-post title="My First Post">
+        <yield to="body">
+          The main blog post content goes here.
+        </yield>
+        <yield to="lead">
+          Some leading text to intro the blog post.
+        </yield>
+      </blog-post>
+
+      <!-- Riot Tags -->
+      <script type="riot/tag" src="tags/blog-post.tag"></script>
+      <script>riot.mount('*');</script>
+
+    </div>
+  </body>
+</html>
