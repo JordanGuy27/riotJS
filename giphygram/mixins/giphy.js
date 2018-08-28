@@ -3,7 +3,14 @@ riot.mixin({
 
     _url: 'https://api.giphy.com/v1/gifs/search',
 
+    //observable
+    giphy: riot.observable(),
+
+
     giphySearch: function(term) {
+
+        //notify of search
+        this.giphy.trigger('start')
 
         term = encodeURIComponent(term)
 
@@ -15,7 +22,8 @@ riot.mixin({
 
             let res = (xhr.status === 200) ? JSON.parse(xhr.responseText) : null
 
-            console.log(res)
+            //notify new results
+            this.giphy.trigger('complete', res)
 
         }
 
