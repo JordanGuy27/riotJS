@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="node_modules/milligram/dist/milligram.min.css">
+
+    <link rel="stylesheet" href="/style.css">
+    <title>GihpyGram</title>
+    <script src="node_modules/riot/riot+compiler.min.js"></script>
+</head>
+<body class="container">
+    <header>
+        <h1>GiphyGram</h1>
+        <search></search>
+    </header>
+   
+
+    <!-- MIXINS -->
+    <script src="mixins/giphy.js"></script>
+    <!-- TAGS -->
+    <script src="tags/search.tag" type="riot/tag"></script>
+    <!-- MOUNT ALL  TAGS -->
+    <script>
+        riot.mount('*');
+    </script>
+</body>
+</html>
