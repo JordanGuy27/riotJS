@@ -1,0 +1,21 @@
+{
+  "name": "rendering-precompiled-tags",
+  "version": "1.0.0",
+  "description": "Course demo",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "pug": "^2.0.3",
+    "riot": "^3.11.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "norepo.com"
+  },
+  "author": "stackacademy.tv",
+  "license": "ISC"
+}
